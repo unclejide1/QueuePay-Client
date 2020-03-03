@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Homepage from './components/Homepage';
-import Signup from './components/SignUp';
+import Signup from './components/Signup/SignUp';
 import SignIn from './components/Signin/SignIn';
 import About from "./components/About";
 import Services from './components/Services';
