@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import "./Signin.style.css";
+import {LoginDiv} from '../styled-components'
 import { Link } from 'react-router-dom';
 
 
 const SignIn = () => {
     const [inputs, setInputs] = useState({
-        "username":"",
+        "email":"",
         "password": ""
     });
 
@@ -22,17 +22,17 @@ const SignIn = () => {
   }
 //   console.log(inputs);
     return (
-        <div className="form-layout">
+        <LoginDiv>
         <h1>Queue-Pay</h1>
         <form onSubmit={handleSubmit}>
-        <label className="username">Username</label>
+        <label className="username">Email</label>
         <input 
         type="text"
          id="fname"
-          name="username"
-          value={inputs.username}
+          name="email"
+          value={inputs.email}
           onChange={handleInputChange}
-           placeholder="Your Username.."
+           placeholder="Your Email.."
             />
     
         <label className="username">Password</label>
@@ -52,7 +52,7 @@ const SignIn = () => {
       <span>Forgot password? <Link to="/forgotPassword" className="util">Click here to recover password</Link></span><br/>
       <span>Not registered? <Link to="/signup" className="util">Create an account</Link></span>
       </div>
-        </div>
+      </LoginDiv>
     );
 }
 
