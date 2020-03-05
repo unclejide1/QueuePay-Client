@@ -235,6 +235,7 @@ width: 100%;
 }
 `
 
+
 export const DashboardLink = styled.div`
 color: white;
 
@@ -286,5 +287,67 @@ a:hover{
   margin-top: 3%;
   background-color: white;
   width: 95%;
+}
+`
+export const UpdateProfileDiv = styled.div`
+text-align: left;
+.update-form{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  text-align: left;
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+input[type=file], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 20%;
+  background-color: tomato;
+  color: #ffffff;
+  padding: 10px 10px;
+  margin: 8px 0;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label{
+  text-align: left;
+  width: 100%;
 }
 `
