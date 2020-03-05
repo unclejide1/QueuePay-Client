@@ -15,10 +15,10 @@ const DashBoard = () => {
                     <div className="link-body">
                     <ul className ="services">
 
-                        <Link to={{pathname: "/dashboard/profile", state:"new state"}}  className= "main-nav" activeClassName="selected" prop="Profile"><li>Profile</li></Link>
-                        <Link exact to="/dashboard/transaction" className= "main-nav" activeClassName="selected" prop="Transaction"><li>Transactions</li></Link>
-                        <Link exact to = "/payout" className= "main-nav" activeClassName="selected" prop="Payout"><li>Payouts</li></Link>
-                        <Link exact to = "/balance" className= "main-nav" activeClassName="selected" prop="Balance"><li>Balance</li></Link>
+                        <NavLink exact to = "/dashboard" className= "main-nav" activeClassName="selected"><li>Home</li></NavLink>
+                        <NavLink to="/dashboard/profile" className= "main-nav" activeClassName="selected"><li>Profile</li></NavLink>
+                        <NavLink exact to="/transaction" className= "main-nav" activeClassName="selected"><li>Transactions</li></NavLink>
+                        <NavLink exact to = "/payout" className= "main-nav" activeClassName="selected"><li>Payouts</li></NavLink>
                     </ul>
                     </div>
                 </div>

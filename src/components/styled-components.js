@@ -230,8 +230,15 @@ width: 100%;
 }
 
 .pages{
+  // height: 100vh;
+  // background-color: red;
   width: 85%;
-  background-color: #ffff;
+   overflow-y: scroll;
+}
+
+
+.share{
+  height: 20%;
 }
 `
 
@@ -291,17 +298,17 @@ a:hover{
 `
 export const UpdateProfileDiv = styled.div`
 text-align: left;
+height: auto;
 .update-form{
   display: flex;
   flex-direction: column;
-  height: 100vh;
   text-align: left;
   width: 40%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - 4rem);
 }
 
 input[type=file], select {
@@ -350,12 +357,22 @@ label{
   text-align: left;
   width: 100%;
 }
-`;
 
-export const TransactionDiv = styled.div`
-  height: 100%;
-  width: 100%;
-  table{
-    width: 100%;
-  }
-`;
+export const DashboardHeaderDiv = styled.div`
+height: 4rem;
+position: sticky;
+top: 0;
+left: 0;
+box-shadow: 0 3px 13px rgba(0,0,0, .2);
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding-right: 6px;
+
+.register{
+  background-color: tomato;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+}
