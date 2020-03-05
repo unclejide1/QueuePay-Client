@@ -14,10 +14,10 @@ const DashBoard = () => {
                     </div>
                     <div className="link-body">
                     <ul className ="services">
+                        <NavLink exact to = "/dashboard" className= "main-nav" activeClassName="selected"><li>Home</li></NavLink>
                         <NavLink to="/dashboard/profile" className= "main-nav" activeClassName="selected"><li>Profile</li></NavLink>
                         <NavLink exact to="/transaction" className= "main-nav" activeClassName="selected"><li>Transactions</li></NavLink>
                         <NavLink exact to = "/payout" className= "main-nav" activeClassName="selected"><li>Payouts</li></NavLink>
-                        <NavLink exact to = "/balance" className= "main-nav" activeClassName="selected"><li>Balance</li></NavLink>
                     </ul>
                     </div>
                 </div>

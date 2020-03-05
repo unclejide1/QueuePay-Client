@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {UpdateProfileDiv} from '../styled-components'
+import {UpdateProfileDiv} from '../styled-components';
+
 
 const UpdateProfile = () => {
 
