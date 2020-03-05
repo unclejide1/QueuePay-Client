@@ -3,6 +3,8 @@ import DashBoardLink from "../dashboard/DashboardLink";
 import {DashboardDiv} from '../styled-components'
 import UpdateProfile from './UpdateProfile';
 import {Route} from 'react-router-dom';
+import Home from './Home/Home';
+import DashboardHeader from './DashboardHeader';
 
 const DashBoard = () => {
     return (
@@ -11,9 +13,15 @@ const DashBoard = () => {
             <DashBoardLink />
             </div>
             <div className = "pages">
-            <Route path='/dashboard/profile'>
-            <UpdateProfile/>
-            </Route>
+                <DashboardHeader/>
+                <div className="pages-content">
+                <Route path='/dashboard/profile'>
+                    <UpdateProfile/>
+                </Route>
+                <Route exact path='/dashboard'>
+                    <Home/>
+                </Route>
+            </div>
             </div>
         </DashboardDiv>
     );
