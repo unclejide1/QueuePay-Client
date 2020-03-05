@@ -2,6 +2,7 @@ import React from 'react';
 import DashBoardLink from "../dashboard/DashboardLink";
 import {DashboardDiv} from '../styled-components'
 import UpdateProfile from './UpdateProfile';
+import Transaction from "./Transaction"
 import {Route} from 'react-router-dom';
 
 const DashBoard = () => {

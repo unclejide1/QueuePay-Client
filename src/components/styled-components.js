@@ -351,3 +351,6 @@ label{
   width: 100%;
 }
 `
+export const TransactionDiv = styled.div`
+
+`;
