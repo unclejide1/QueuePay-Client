@@ -1,6 +1,6 @@
 import React from 'react';
 import {DashboardLink} from '../styled-components';
-import {NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const DashBoard = () => {
     return (
@@ -14,10 +14,11 @@ const DashBoard = () => {
                     </div>
                     <div className="link-body">
                     <ul className ="services">
-                        <NavLink to="/dashboard/profile" className= "main-nav" activeClassName="selected"><li>Profile</li></NavLink>
-                        <NavLink exact to="/dashboard/transaction" className= "main-nav" activeClassName="selected"><li>Transactions</li></NavLink>
-                        <NavLink exact to = "/payout" className= "main-nav" activeClassName="selected"><li>Payouts</li></NavLink>
-                        <NavLink exact to = "/balance" className= "main-nav" activeClassName="selected"><li>Balance</li></NavLink>
+
+                        <Link to={{pathname: "/dashboard/profile", state:"new state"}}  className= "main-nav" activeClassName="selected" prop="Profile"><li>Profile</li></Link>
+                        <Link exact to="/dashboard/transaction" className= "main-nav" activeClassName="selected" prop="Transaction"><li>Transactions</li></Link>
+                        <Link exact to = "/payout" className= "main-nav" activeClassName="selected" prop="Payout"><li>Payouts</li></Link>
+                        <Link exact to = "/balance" className= "main-nav" activeClassName="selected" prop="Balance"><li>Balance</li></Link>
                     </ul>
                     </div>
                 </div>

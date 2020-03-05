@@ -15,6 +15,9 @@ const DashBoard = () => {
             <Route path='/dashboard/profile'>
             <UpdateProfile/>
             </Route>
+            <Route path='/dashboard/transaction'>
+            <Transaction/>
+            </Route>
             </div>
         </DashboardDiv>
     );

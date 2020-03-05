@@ -350,7 +350,12 @@ label{
   text-align: left;
   width: 100%;
 }
-`
-export const TransactionDiv = styled.div`
+`;
 
+export const TransactionDiv = styled.div`
+  height: 100%;
+  width: 100%;
+  table{
+    width: 100%;
+  }
 `;
