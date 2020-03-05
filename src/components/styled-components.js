@@ -357,7 +357,6 @@ label{
   text-align: left;
   width: 100%;
 }
-`
 
 export const DashboardHeaderDiv = styled.div`
 height: 4rem;
@@ -377,5 +376,3 @@ padding-right: 6px;
   border-radius: 4px;
   color: #fff;
 }
-
-`

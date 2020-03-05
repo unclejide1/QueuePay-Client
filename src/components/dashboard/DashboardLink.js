@@ -1,6 +1,6 @@
 import React from 'react';
 import {DashboardLink} from '../styled-components';
-import {NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const DashBoard = () => {
     return (
@@ -14,6 +14,7 @@ const DashBoard = () => {
                     </div>
                     <div className="link-body">
                     <ul className ="services">
+
                         <NavLink exact to = "/dashboard" className= "main-nav" activeClassName="selected"><li>Home</li></NavLink>
                         <NavLink to="/dashboard/profile" className= "main-nav" activeClassName="selected"><li>Profile</li></NavLink>
                         <NavLink exact to="/transaction" className= "main-nav" activeClassName="selected"><li>Transactions</li></NavLink>
