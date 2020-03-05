@@ -219,3 +219,19 @@ a{
 }
 
 `;
+
+export const DashboardDiv = styled.div`
+display: flex;
+height: 100vh;
+// min-width: 80px ;
+width: 100%;
+.profile{
+  width: 15%;
+  border-right: 2px solid #f37b65;
+}
+
+.pages{
+  width: 85%;
+  background-color: #ffff;
+}
+`
