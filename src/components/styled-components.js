@@ -234,6 +234,61 @@ width: 100%;
   background-color: #ffff;
 }
 `
+
+
+export const DashboardLink = styled.div`
+color: white;
+
+ul li{
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  // padding-left: 10px;
+}
+.link-head{
+  height: 15%;
+  border-radius: 5px;
+  margin: 5%;
+  text-align: center;
+  background-color: #f37b65;
+  // border-radius: 5px;
+  color: #ffffff;
+  text-align: left;
+}
+
+h4{
+  font-weight: lighter;
+  padding-left: 1rem;
+}
+
+li{
+  height: 10%;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+a:hover{
+  color: #f37b65;
+  padding: 10px;
+}
+
+.link-body{
+  display: flex;
+  height: 85%;
+  margin-top: 3%;
+  background-color: white;
+  width: 95%;
+}
+`
 export const UpdateProfileDiv = styled.div`
 text-align: left;
 .update-form{
