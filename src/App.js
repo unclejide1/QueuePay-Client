@@ -7,7 +7,6 @@ import SignIn from './components/Signin/SignIn';
 import About from "./components/About";
 import Services from './components/Services';
 import Contact from './components/Contact';
-import DashBoard from './components/dashboard/DashBoard';
 
 function App() {
   return (
@@ -23,8 +22,8 @@ function App() {
     <Route path='/signIn'>
           <SignIn />
     </Route>
-    <Route path='/dashboard'>
-    <DashBoard />
+    <Route path='/signIn'>
+    <SignIn />
     </Route>
     <Route path='/about'>
     <About/>
