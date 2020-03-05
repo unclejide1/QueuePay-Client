@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {withRouter} from 'react-router-dom'
 import {UpdateProfileDiv} from '../styled-components'
-import {UpdateProfileDiv} from '../styled-components';
 
 const UpdateProfile = () => {
     const [inputs, setInputs] = useState({

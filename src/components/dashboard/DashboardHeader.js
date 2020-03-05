@@ -1,14 +1,15 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink,withRouter} from 'react-router-dom';
 import {DashboardHeaderDiv} from '../styled-components'
 
 
-const DashboardHeader = () => {
+const DashboardHeader = (props) => {
     return (
         <DashboardHeaderDiv>
-            <NavLink exact to="/" ><button className="register">Sign Out</button></NavLink>
+            <div className="name"><h2>{props.location.pathname.split('/')[2].toUpperCase()}</h2></div>
+           <div> <NavLink exact to="/" ><button className="register">Sign Out</button></NavLink></div>
         </DashboardHeaderDiv>
     );
 };
 
-export default DashboardHeader;
+export default withRouter(DashboardHeader);

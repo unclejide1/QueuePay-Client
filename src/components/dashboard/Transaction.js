@@ -4,6 +4,8 @@ import {TransactionDiv} from "../styled-components";
 const Transaction = () => {
     return (
         <TransactionDiv>
+            <div className="transactions">
+            <h3>View all transactions</h3>
             <table class="table table-striped">
             <thead>
                 <tr>
@@ -34,6 +36,7 @@ const Transaction = () => {
                 </tr>
             </tbody>
             </table>
+            </div>
             </TransactionDiv>
     )
 }
