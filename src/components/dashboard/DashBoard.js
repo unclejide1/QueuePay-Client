@@ -2,11 +2,16 @@ import React from 'react';
 import DashBoardLink from "../dashboard/DashboardLink";
 import {DashboardDiv} from '../styled-components'
 import UpdateProfile from './UpdateProfile';
-import {Route} from 'react-router-dom';
+import {Route, useHistory} from 'react-router-dom';
 import Home from './Home/Home';
 import DashboardHeader from './DashboardHeader';
+import OTP from '../OTP';
 
 const DashBoard = () => {
+ let history = useHistory()
+ if(!localStorage.token){
+     history.push('/')
+ }
     return (
         <DashboardDiv>
             <div className ="profile">
@@ -21,6 +26,7 @@ const DashBoard = () => {
                 <Route exact path='/dashboard'>
                     <Home/>
                 </Route>
+               
             </div>
             </div>
         </DashboardDiv>

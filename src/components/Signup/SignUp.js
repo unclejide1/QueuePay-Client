@@ -2,19 +2,33 @@ import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import "./Signup.styles.css";
 import {RegisterDiv} from '../styled-components'
+import close from '../assets/close-24px.svg'
 
 const Signup = () => {
   const [inputs, setInputs] = useState({
-    "busname": "",
+    "businessName": "",
     "email": "",
     "password": ""
   });
+  const [error, setError] = useState({error:false,message:false,details:""})
 
-  const handleSubmit = (event) => {
-    if (event) {
+
+  const handleSubmit = async (event) => {
       event.preventDefault();
-      console.log(inputs);
-    }
+      const newUser = await fetch('/auth/signUp', {
+        method: "POST",
+        headers:{
+          "content-type": 'application/json'
+        },
+        body: JSON.stringify(inputs)
+      })
+      const response = await newUser.json()
+      if(response.error){
+        setError({error:true,message:false,details:response.error})
+      }
+      if(response.message){
+        setError({error:false,message:true,details:response.message})
+      }
   }
 
   const handleInputChange = (event) => {
@@ -22,7 +36,9 @@ const Signup = () => {
     setInputs(inputs => ({...inputs, [event.target.name]: event.target.value}));
     }
 
-
+const errorMessage =  (<p className = "error">
+    {error.details} <img className ="close" onClick={()=>{setError({error:false,message:false,details:""})}} src={close} alt ="close button"/></p>)
+  const successMessage = (<p className = "success">{error.details} </p>)
 
     return (
         <RegisterDiv>
@@ -36,19 +52,20 @@ Your customers will love the simple, secure payment experience, and if you need 
 Thank you for choosing Paystack. We look forward to being a reliable growth engine and partner to you, your team, and your business.
         </p>
         </div>
+        
         <div className="form-container">
         <h2 className = "registerhere">Register on Queue-Pay</h2>
         <form className ="signup-form" onSubmit={handleSubmit}>
-
+        {error.error?errorMessage:(error.message?successMessage:"")}
         <label className="busname">Business Name</label>
         <input 
         type="text"
          id="busname"
-          name="busname"
-          value={inputs.busname}
+          name="businessName"
+          value={inputs.businessName}
           onChange={handleInputChange}
            placeholder="Your Business-name.."
-            />
+            required/>
 
             <label className="email">Email</label>
             <input 
@@ -68,7 +85,7 @@ Thank you for choosing Paystack. We look forward to being a reliable growth engi
         value={inputs.password}
         onChange={handleInputChange}
         placeholder="Your Password.."
-         />
+         required/>
 
       
         <input type="submit" value="Submit" />

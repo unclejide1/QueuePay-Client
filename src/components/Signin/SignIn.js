@@ -1,30 +1,53 @@
 import React, {useState} from 'react';
 import {LoginDiv} from '../styled-components'
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import close from '../assets/close-24px.svg'
 
 
 const SignIn = () => {
+  const history = useHistory()
     const [inputs, setInputs] = useState({
         "email":"",
         "password": ""
     });
 
-    const handleSubmit = (event) => {
-        if (event) {
+
+    const [error, setError] = useState('')
+
+    const handleSubmit = async (event) => {
           event.preventDefault();
           console.log(inputs);
-        }
-      }
+          const loggedInUser = await fetch('/auth/login', {
+            method: "POST",
+            headers:{
+              "content-type": 'application/json'
+            },
+            body: JSON.stringify(inputs)
+          })
+          const response = await loggedInUser.json()
+          if(response.error){
+            setError(response.message)
+          }
+          if(response.error){
+            setError(response.error)
+          }
+          if(response.data){
+          localStorage.setItem("token", response.data.token)
+          history.push('/dashboard')
+          }
+    }
 
         const handleInputChange = (event) => {
     event.persist();
     setInputs(inputs => ({...inputs, [event.target.name]: event.target.value}));
   }
-//   console.log(inputs);
+
+    const errorMessage = !error? (<p></p>) : (<p className = "error">{error} <img className ="close" onClick={()=>{setError('')}} src={close} alt ="close button"/></p>)
     return (
         <LoginDiv>
         <h1>Queue-Pay</h1>
         <form onSubmit={handleSubmit}>
+        {errorMessage}
         <label className="username">Email</label>
         <input 
         type="text"

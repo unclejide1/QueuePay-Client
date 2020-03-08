@@ -1,12 +1,16 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import {DashboardHeaderDiv} from '../styled-components'
 
 
 const DashboardHeader = () => {
+    const history = useHistory()
     return (
         <DashboardHeaderDiv>
-            <NavLink exact to="/" ><button className="register">Sign Out</button></NavLink>
+            <button className="register" onClick={() =>{
+                localStorage.clear()
+                history.push('/')
+            }}>Sign Out</button>
         </DashboardHeaderDiv>
     );
 };
