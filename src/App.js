@@ -8,6 +8,9 @@ import About from "./components/About";
 import Services from './components/Services';
 import Contact from './components/Contact';
 import DashBoard from './components/dashboard/DashBoard';
+import PaymentWidget from "./PaymentWidget"
+import VerifyEmail from './components/Signup/VerifyEmail';
+import OTP from './components/OTP';
 
 function App() {
   return (
@@ -34,6 +37,12 @@ function App() {
     </Route>
     <Route path='/contact'>
     <Contact/>
+    </Route>
+    <Route path='/auth/verifyEmail'>
+    <VerifyEmail/>
+    </Route>
+    <Route path='/payout'>
+      <OTP/>
     </Route>
     </Switch>
   </Router>
