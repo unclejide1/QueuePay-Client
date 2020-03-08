@@ -5,7 +5,7 @@ import UpdateProfile from './UpdateProfile';
 import {Route, useHistory} from 'react-router-dom';
 import Home from './Home/Home';
 import DashboardHeader from './DashboardHeader';
-import OTP from '../OTP';
+import Transaction from "./Transaction";
 
 const DashBoard = () => {
  let history = useHistory()
@@ -19,15 +19,17 @@ const DashBoard = () => {
             </div>
             <div className = "pages">
                 <DashboardHeader/>
-                <div className="pages-content">
-                <Route path='/dashboard/profile'>
-                    <UpdateProfile/>
-                </Route>
-                <Route exact path='/dashboard'>
+                    <div className="pages-content">
+                    <Route exact path='/dashboard'>
                     <Home/>
-                </Route>
-               
-            </div>
+                    </Route>
+                    <Route path='/dashboard/profile'>
+                     <UpdateProfile/>
+                    </Route>
+                    <Route path='/dashboard/transaction'>
+                     <Transaction/>
+                    </Route>
+                    </div>
             </div>
         </DashboardDiv>
     );

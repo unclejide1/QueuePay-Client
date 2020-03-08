@@ -395,10 +395,11 @@ textarea, select {
 label{
   text-align: left;
   width: 100%;
-}
-`
+}`
 
 export const DashboardHeaderDiv = styled.div`
+display: flex;
+justify-content: space-between;
 height: 4rem;
 position: sticky;
 top: 0;
@@ -416,8 +417,35 @@ padding-right: 6px;
   border-radius: 4px;
   color: #fff;
 }
+.name{
+  margin-left: 20px;
+}
+.name h2{
+  font-weight: lighter;
+}
 
-`
+`;
+
+export const TransactionDiv = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+  
+table{
+    width: 100%;
+    margin-top: 7%;
+  }
+
+  .transactions h3{
+    margin-left: 38%;
+  }
+  table tr{
+    text-align: center;
+  }
+`;
+
+
+
 
 export const PieDiv = styled.div`
 width: 2000px
@@ -573,3 +601,10 @@ a:hover{
   
 }
 `
+
+export const CheckoutDiv = styled.div`
+.panel-title {display: inline;font-weight: bold;}
+.checkbox.pull-right { margin: 0; }
+.pl-ziro { padding-left: 0px; }
+`;
+

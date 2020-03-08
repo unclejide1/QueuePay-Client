@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
-import {UpdateProfileDiv} from '../styled-components';
-
+import {withRouter} from 'react-router-dom'
+import {UpdateProfileDiv} from '../styled-components'
 
 const UpdateProfile = () => {
-
     const [inputs, setInputs] = useState({
         "busDescription": "",
         "busURL": "",
@@ -71,4 +70,4 @@ const UpdateProfile = () => {
     );
 };
 
-export default UpdateProfile;
+export default withRouter(UpdateProfile);

@@ -15,6 +15,7 @@
     "react-scripts": "3.4.0",
     "styled-components": "^5.0.1",
     "zoid": "^9.0.39"
+
   },
   "scripts": {
     "start": "react-scripts start",

@@ -11,6 +11,8 @@ import DashBoard from './components/dashboard/DashBoard';
 import PaymentWidget from "./PaymentWidget"
 import VerifyEmail from './components/Signup/VerifyEmail';
 import OTP from './components/OTP';
+import Checkout from "./components/Checkout";
+
 
 function App() {
   return (
@@ -43,6 +45,9 @@ function App() {
     </Route>
     <Route path='/payout'>
       <OTP/>
+    </Route>
+    <Route path='/checkout'>
+    <Checkout />
     </Route>
     </Switch>
   </Router>

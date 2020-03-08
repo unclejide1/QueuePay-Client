@@ -3,7 +3,7 @@ import {useHistory} from 'react-router-dom';
 import {DashboardHeaderDiv} from '../styled-components'
 
 
-const DashboardHeader = () => {
+const DashboardHeader = (props) => {
     const history = useHistory()
     return (
         <DashboardHeaderDiv>
@@ -15,4 +15,4 @@ const DashboardHeader = () => {
     );
 };
 
-export default DashboardHeader;
+export default (DashboardHeader);
