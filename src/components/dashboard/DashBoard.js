@@ -6,6 +6,9 @@ import Transaction from "./Transaction";
 import {Route} from 'react-router-dom';
 import Home from './Home/Home';
 import DashboardHeader from './DashboardHeader';
+import ProtectedRoute from "../../Util/Auth";
+import NotFound from '../../components/NotFound';
+
 
 const DashBoard = () => {
     return (
@@ -17,14 +20,15 @@ const DashBoard = () => {
 
                 <DashboardHeader/>
                 <div className="pages-content">
-                <Route path='/dashboard/profile'>
-                    <UpdateProfile/>
-                </Route>
+                <Route path='/dashboard/profile' component={UpdateProfile} />
+  
                 <Route path='/dashboard/transaction'>
                     <Transaction/>
                 </Route>
-                <Route exact path='/dashboard/home'>
-                    <Home/>
+                <Route exact path='/dashboard/home' component={Home} />
+
+                <Route exact path='*'>
+                    <NotFound/>
                 </Route>
             </div>
             </div>

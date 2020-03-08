@@ -404,3 +404,10 @@ table{
     text-align: center;
   }
 `;
+
+
+export const CheckoutDiv = styled.div`
+.panel-title {display: inline;font-weight: bold;}
+.checkbox.pull-right { margin: 0; }
+.pl-ziro { padding-left: 0px; }
+`;

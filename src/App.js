@@ -8,6 +8,7 @@ import About from "./components/About";
 import Services from './components/Services';
 import Contact from './components/Contact';
 import DashBoard from './components/dashboard/DashBoard';
+import Checkout from "./components/Checkout";
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
     </Route>
     <Route path='/contact'>
     <Contact/>
+    </Route>
+    <Route path='/checkout'>
+    <Checkout />
     </Route>
     </Switch>
   </Router>
