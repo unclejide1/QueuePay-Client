@@ -8,8 +8,8 @@ const DashBoard = () => {
             <div className="container">
                 <div className="links">
                     <div className="link-head">
-                        <h4>Queue Pay</h4>
-                        <h4>ID: 123456</h4>
+                        <h4>{localStorage.getItem("businessName")}</h4>
+                        <h4>ID: {localStorage.getItem("businessID")}</h4>
                         
                     </div>
                     <div className="link-body">
