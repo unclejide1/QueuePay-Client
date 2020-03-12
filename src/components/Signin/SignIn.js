@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {LoginDiv} from '../styled-components'
 import { Link, useHistory } from 'react-router-dom';
-import close from '../assets/close-24px.svg'
+import close from '../assets/close-24px.svg';
+
 
 
 const SignIn = () => {
@@ -33,6 +34,9 @@ const SignIn = () => {
           }
           if(response.data){
           localStorage.setItem("token", response.data.token)
+          localStorage.setItem("businessName", response.data.userBusinessName)
+          localStorage.setItem("businessEmail", response.data.userEmail)
+          localStorage.setItem("businessID",response.data.userId)
           history.push('/dashboard')
           }
     }
