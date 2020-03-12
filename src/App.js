@@ -12,6 +12,8 @@ import PaymentWidget from "./PaymentWidget"
 import VerifyEmail from './components/Signup/VerifyEmail';
 import OTP from './components/OTP';
 import Checkout from "./components/Checkout";
+import ProcessPayment from './components/dashboard/ProcessPayment/ProcessPayment';
+import PaymentForm from './components/PaymentForm'
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
     <Switch>
     <Route exact path='/'>
       <Homepage />
+      <PaymentForm />
     </Route> 
     <Route path='/signup'>
           <Signup />
@@ -44,7 +47,7 @@ function App() {
     <VerifyEmail/>
     </Route>
     <Route path='/payout'>
-      <OTP/>
+      <ProcessPayment/>
     </Route>
     <Route path='/checkout'>
     <Checkout />
