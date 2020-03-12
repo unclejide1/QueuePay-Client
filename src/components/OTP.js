@@ -1,12 +1,13 @@
 import React from 'react';
 import { OTPDiv } from './styled-components';
 
-const OTP = () => {
+const OTP = (props) => {
     return (
         <OTPDiv>
             <div id="dialog">
                 <h3>Please enter the OTP sent via SMS:</h3>
                 <span>(we want to make sure it's you)</span>
+                <p>{props.amount}</p>
                 <form id="form">
                 <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
                 <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
