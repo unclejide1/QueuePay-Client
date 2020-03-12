@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import CardCheckout from './Checkout/CardCheckout';
 
 export const NavDiv = styled.div`
 display: flex;
@@ -410,4 +411,8 @@ export const CheckoutDiv = styled.div`
 .panel-title {display: inline;font-weight: bold;}
 .checkbox.pull-right { margin: 0; }
 .pl-ziro { padding-left: 0px; }
+`;
+
+export const CardCheckoutDiv = styled.div`
+
 `;
