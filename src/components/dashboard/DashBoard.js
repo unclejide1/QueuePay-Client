@@ -6,6 +6,8 @@ import {Route, useHistory} from 'react-router-dom';
 import Home from './Home/Home';
 import DashboardHeader from './DashboardHeader';
 import Transaction from "./Transaction";
+import SingleTransaction from "./SingleTransaction";
+import Payout from './Payout';
 
 const DashBoard = () => {
  let history = useHistory()
@@ -28,6 +30,12 @@ const DashBoard = () => {
                     </Route>
                     <Route path='/dashboard/transaction'>
                      <Transaction/>
+                    </Route>
+                    <Route path='/dashboard/singletransaction/:id'>
+                     <SingleTransaction/>
+                    </Route>
+                    <Route path='/dashboard/payout'>
+                     <Payout/>
                     </Route>
                     </div>
             </div>
