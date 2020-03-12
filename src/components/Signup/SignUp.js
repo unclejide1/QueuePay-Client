@@ -15,7 +15,7 @@ const Signup = () => {
 
   const handleSubmit = async (event) => {
       event.preventDefault();
-      const newUser = await fetch('/auth/signUp', {
+      const newUser = await fetch('/auth/signup', {
         method: "POST",
         headers:{
           "content-type": 'application/json'
