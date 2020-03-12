@@ -454,50 +454,51 @@ height: 3000px
 
 export const HomeDiv = styled.div`
 display: flex;
+height: 70%;
 justify-content: space-between;
 align-items: center;
-height: calc(100vh - 10rem);
+flex-direction: column;
 
 
 .piechart{
-height: 90%;
-width: 65%;
+
+width: 55%;
 text-align: center;
 }
 
 .details{
-  height: 90%;
-  width: 35%;
+  margin-top: 2rem;
+  height: 30%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  padding-left: 140px;
+  justify-content: space-around;
+  flex-direction: row;
+  // padding-left: 140px;
 }
 
 .value{
-  background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%) !important;
   width: 55%;
-  border: none;
-  color: #fff;
+  box-shadow: 0 3px 13px rgba(255,99,71, .2);
+  color: 	#000000;
+  font-family: "Times New Roman", Times, serif;
   display: flex;
   flex-direction: column;
+  font-style: italic;
   border-radius: 4px;
   justify-content: center;
 align-items: center;
 }
 
 .transact{
-  height: 19%;
-  background-image: linear-gradient(to top, #0ba368 0%, #3cba92 100%) !important;
+  width:20%;
+  
 }
 .bal {
-  height: 19%;
-  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%) !important;
+  width:20%;
 }
 
 .val {
-  height: 19%;
-  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%) !important;
+  width:20%;
 }
 `
 
@@ -606,5 +607,137 @@ export const CheckoutDiv = styled.div`
 .panel-title {display: inline;font-weight: bold;}
 .checkbox.pull-right { margin: 0; }
 .pl-ziro { padding-left: 0px; }
+`;
+
+export const PayoutDiv = styled.div`
+display: flex;
+height: 80vh;
+min-width: 80px ;
+width: 60%;
+margin: 0 auto;
+justify-content: space-between;
+align-items: center;
+
+.error{
+  background: #FFC199; /*Change background color*/
+	border-left: 9px solid #FF6600; /*Change left border color*/
+  color: #2c3e50;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.success{
+  background: 	#00FF7F; /*Change background color*/
+	border-left: 9px solid #228B22; /*Change left border color*/
+  color: #2c3e50;
+  font-size: 0.7rem;
+  margin-left: 4px;
+  justify-content: space-between;
+}
+.close{
+  height: 60%;
+  cursor: pointer;
+}
+
+.introduction{
+  width: 45%;
+  padding: 5%;
+  
+}
+.create{
+  width: auto;
+  text-align: left;
+}
+
+.business-summary{
+  width: auto;
+  text-align: justify;
+}
+
+.form-container{
+  display:flex;
+  height: 50%;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  width: 45%;
+  padding: 5%;
+
+}
+
+.signup-form{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  flex-direction: column;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: tomato;
+  color: white;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.registered{
+  text-align: center;
+  width: auto;
+}
+
+.util{
+  text-decoration: none;
+}
+
+a{
+  color: tomato;
+  font-size: .9rem;
+}
+
 `;
 
