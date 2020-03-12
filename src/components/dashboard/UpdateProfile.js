@@ -5,7 +5,6 @@ import {UpdateProfileDiv} from '../styled-components'
 const UpdateProfile = () => {
     const [inputs, setInputs] = useState({
         "busDescription": "",
-        "busURL": "",
         "logo": "",
         "document": ""
       });
@@ -14,6 +13,7 @@ const UpdateProfile = () => {
         if (event) {
           event.preventDefault();
           console.log(inputs);
+          
         }
       }
     
@@ -32,16 +32,6 @@ const UpdateProfile = () => {
         value={inputs.busDescription}
         onChange={handleInputChange}
         placeholder="Business Description..."
-         />
-
-         <label className="bus-url">Website Link For the Business: </label>
-        <input
-        type = "text"  
-        id="bus-url-field" 
-        name="busURL" 
-        value={inputs.busURL}
-        onChange={handleInputChange}
-        placeholder="Business Website Url..."
          />
 
         <label className="bus-logo" for= "upload">Upload Busines Logo: </label>
