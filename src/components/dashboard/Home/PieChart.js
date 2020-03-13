@@ -3,23 +3,24 @@ import React from 'react';
 import { PieDiv } from '../../styled-components';
 // import { useGet } from 'restful-react';
 
-const PieChart = () => {
-//   const { error, loading, data: stats } = useGet({
-//     path: 'api/stats',
-//   });
+const PieChart = (props) => {
+  const { output } = props;
+  //   const { error, loading, data: stats } = useGet({
+  //     path: 'api/stats',
+  //   });
 
-//   if (loading) {
-//     return 'loading...';
-//   }
-//   if (error) {
-//     return 'error loading page';
-//   }
+  //   if (loading) {
+  //     return 'loading...';
+  //   }
+  //   if (error) {
+  //     return 'error loading page';
+  //   }
   const driverData = {
     labels: ['Successful', 'Failed'],
     datasets: [
       {
         label: 'Transactions',
-        data: [10_000, 5_000],
+        data: [output.totalSuccessfulTransaction, output.totalFailedTransaction],
         backgroundColor: ['green', 'red'],
       },
     ],
